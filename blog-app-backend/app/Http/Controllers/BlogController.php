@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Carbon\Carbon;
 use App\Models\Blog;
 use App\Models\TempImage;
 use Illuminate\Http\Request;
@@ -68,14 +69,23 @@ class BlogController extends Controller
             'data' => $blog
         ]);
     }
-    public function show($id)
-    {
+    public function show($id) {
         $blog = Blog::find($id);
 
-        if ($blog == null)
-        {
-            
+        if ($blog == null) {
+            return response()->json([
+                'status' => false,
+                'message' => 'Blog not found',
+            ]);
         }
+
+        $blog['date'] = Carbon::parse($blog->created_at)->format('d M, Y');
+
+        return response()->json([
+            'status' => true,
+            'data' => $blog,
+        ]);
+
     }
     public function update()
     {

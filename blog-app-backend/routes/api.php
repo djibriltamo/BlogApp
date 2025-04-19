@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('blogs', [BlogController::class, 'index']);
 Route::post('blogs/store', [BlogController::class, 'store']);
 Route::post('save_image', [TempImageController::class, 'store']);
+Route::get('blogs/{id}',[BlogController::class,'show']);
 
 Route::get('/user', function (Request $request) {
     return $request->user();

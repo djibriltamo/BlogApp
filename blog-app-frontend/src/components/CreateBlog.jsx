@@ -87,7 +87,7 @@ export default function CreateBlog() {
                     <div className='mb-3'>
                         <label className='form-label'>Description</label>
                         <Editor
-                            containerProps={{ style: { height: '400px' } }}
+                            containerProps={{ style: { height: '700px' } }}
                             value={html} onChange={onChange}
                         />
                       </div>
