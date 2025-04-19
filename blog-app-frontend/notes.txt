@@ -1,0 +1,15 @@
+style={{
+        transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+    }}
+    onMouseEnter={(e) => {
+        e.currentTarget.style.transform = 'translateY(-10px)';
+        e.currentTarget.style.boxShadow = '0 8px 15px rgba(0, 0, 0, 0.2)';
+    }}
+    onMouseLeave={(e) => {
+        e.currentTarget.style.transform = 'translateY(0)';
+        e.currentTarget.style.boxShadow = 'none';
+}}
+
+Dans cet article nous vous présentons la liste des personnalités les plus riches du monde. Par des grand rêves et par un travail archané la moyenne de leur richesse dépasse l'entendement. 
+
+TOP 10 des plus riches du monde
