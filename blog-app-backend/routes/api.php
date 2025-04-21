@@ -9,6 +9,7 @@ Route::get('blogs', [BlogController::class, 'index']);
 Route::post('blogs/store', [BlogController::class, 'store']);
 Route::post('save_image', [TempImageController::class, 'store']);
 Route::get('blogs/{id}',[BlogController::class,'show']);
+Route::put('blogs/{id}',[BlogController::class,'update']);
 
 Route::get('/user', function (Request $request) {
     return $request->user();

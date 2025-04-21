@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Blogs from './components/Blogs';
 import Contact from './components/Contact';
+import EditBlog from './components/EditBlog';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'react-toastify/dist/ReactToastify.css';
 import { Route, Routes } from 'react-router-dom';
@@ -19,7 +20,8 @@ function App() {
       <Routes>
         <Route path='/' element={<Blogs />} />
         <Route path='/create' element={<CreateBlog />} />
-        <Route path='/blog/:id' element={ <BlogDetail /> } />
+        <Route path='/blog/:id' element={<BlogDetail />} />
+        <Route path='/blog/edit/:id' element={ <EditBlog /> } />
       </Routes>
       <ToastContainer />
     </>

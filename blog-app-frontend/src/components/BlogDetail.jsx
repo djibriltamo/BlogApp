@@ -30,7 +30,7 @@ export default function BlogDetail() {
                   <p>by <strong>{blog.author}</strong> on {blog.date}</p>
                   
                   {
-                      (blog.image) && <img className='w-500 border-0 shadow-lg' src={`http://localhost:8000/uploads/blogs/${blog.image}`}  />
+                    (blog.image) && <img className='w-500 border-0 shadow-lg' src={`http://localhost:8000/uploads/blogs/${blog.image}`}  />
                   }
 
                   <div className='mt-3' dangerouslySetInnerHTML={{ __html:  blog.description }}></div>
